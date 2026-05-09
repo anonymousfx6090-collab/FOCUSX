@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOCUS | Sign Up</title>
+    <link rel="stylesheet" href="sign-up.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="topbar">
+            <a class="brand" href="index.html">FOCUS <span>X</span></a>
+            <nav class="page-nav">
+                <a href="index.html">Home</a>
+                <a href="login.html">Sign In</a>
+                <a class="active" href="sign-up.html">Sign Up</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+
+        <main class="signup-section">
+            <section class="signup-panel">
+                <div class="panel-copy">
+                    <span class="eyebrow">Get started</span>
+                    <h1>Create your FocusX account</h1>
+                    <p>Join the Focus community and unlock your dashboard.</p>
+                </div>
+
+                <form class="signup-form"   id="loginForm">
+                    <label>
+                        <span>Full name</span>
+                        <input type="text" id="nameInput" name="name" placeholder="Jane Doe" required>
+                    </label>
+
+                    <label>
+                        <span>Email</span>
+                        <input type="email" name="email" placeholder="you@domain.com" required>
+                    </label>
+
+                    <label>
+                        <span>Password</span>
+                        <input type="password" name="password" placeholder="Create a password" required>
+                    </label>
+
+                    <label>
+                        <span>Confirm password</span>
+                        <input type="password" name="confirm_password" placeholder="Repeat your password" required>
+                    </label>
+
+                    <div class="form-meta">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="newsletter">
+                            <span class="checkbox-custom"></span>
+                            Send me tips and updates
+                        </label>
+                    </div>
+
+                    <button class="submit-button" type="submit">Create account</button>
+
+                    <div class="divider"><span>Or sign up with</span></div>
+
+                    <div class="social-row">
+                        <button type="button" class="social-button google">Google</button>
+                        <button type="button" class="social-button apple">Apple</button>
+                    </div>
+
+                    <p class="signin-note">Already have an account? <a href="./login.html">Sign in</a></p>
+                </form>
+                   <div class="overlay" id="overlay">
+
+        <div class="popup">
+
+            <h2 id="greetingText"></h2>
+
+            <p id="messageText"></p>
+
+            <button id="closeBtn">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+            </section>
+
+            <aside class="feature-panel">
+                <div class="feature-card">
+                    <h2>PLAN,FOCUS,ACHEIVE</h2>
+                    <p>Register your account with no dificulty.</p>
+                    <ul>
+                        <li>Register your account</li>
+                        <li>Login to dashboard</li>
+                        <li>Stay focused and lock in</li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
+    </div>
+</body>
+    <script src="signup.js"></script>
+</html>
