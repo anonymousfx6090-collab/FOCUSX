@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    padding: 10px;
+}
+.page{
+    height: 100%;
+    width: 100%;
+  background: linear-gradient(135deg, gold, black);
+}
+
+/* .dashboard{
+    position: relative;
+
+    min-height: calc(100vh - 30px);
+
+    background: #050505;
+
+    /* border-radius: 24px; */
+
+    overflow: hidden;
+
+    display: grid;
+
+    grid-template-columns: 260px 1fr;
+
+    border: 1px solid rgba(255,255,255,0.05);
+} */
+

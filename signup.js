@@ -1,5 +1,6 @@
-const loginForm = document.getElementById("loginForm");
+const signUpForm = document.getElementById("signUpForm");
 const nameInput = document.getElementById("nameInput");
+const errorMessage = document.getElementById('error');
 
 const overlay = document.getElementById("overlay");
 
@@ -8,10 +9,15 @@ const messageText = document.getElementById("messageText");
 
 const closeBtn = document.getElementById("closeBtn");
 
-loginForm.addEventListener("submit", (e) => {
+signUpForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    const userName = nameInput.value.trim();
+    const signUpFormData = new FormData(signUpForm);
+    const {name, confirm,password,email} = Object.fromEntries(signUpFormData.entries());
+    
+    if (password !== confirm){
+       errorMessage.innerText = "Passwords do not match" 
+       return
+    }
 
     const currentHour = new Date().getHours();
 
@@ -25,7 +31,7 @@ loginForm.addEventListener("submit", (e) => {
         greeting = "Good Evening";
     }
 
-    greetingText.innerHTML = `${greeting}, ${userName}`;
+    greetingText.innerHTML = `${greeting}, ${name}`;
 
     messageText.innerHTML = `
         We have successfully collected your information
@@ -43,7 +49,8 @@ loginForm.addEventListener("submit", (e) => {
     overlay.classList.add("active");
 
     // optional: clear form after submit
-    loginForm.reset();
+    signUpForm.reset();
+    error.innerText=''
 });
 
 closeBtn.addEventListener("click", () => {

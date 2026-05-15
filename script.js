@@ -12,8 +12,7 @@ navLinks.forEach(link => {
     });
 })
 
-// ============ SCROLL ANIMATIONS ============
-// Intersection Observer for scroll-triggered animations
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: "0px 0px -100px 0px"
@@ -28,7 +27,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe animated elements for scroll trigger
 document.addEventListener("DOMContentLoaded", () => {
     const animatedElements = document.querySelectorAll(
         ".feature-box, .how-it-works-card, .free-card, .pro-card, .premium-card"
@@ -38,14 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// ============ ICON ROTATION ON HOVER ============
+
 document.querySelectorAll(".feature-box .icon svg").forEach(icon => {
     icon.addEventListener("mouseenter", function () {
         this.style.transition = "transform 0.6s ease-in-out";
     });
 });
 
-// ============ STAR RATING INTERACTION ============
 document.querySelectorAll(".stars-container svg").forEach((star, index) => {
     star.addEventListener("mouseenter", function () {
         this.style.transform = "scale(1.3) rotate(20deg)";
@@ -58,7 +55,6 @@ document.querySelectorAll(".stars-container svg").forEach((star, index) => {
     });
 });
 
-// ============ SMOOTH PAGE SCROLL ============
 document.querySelectorAll("a[href^='#']").forEach(anchor => {
     anchor.addEventListener("click", function (e) {
         const href = this.getAttribute("href");
